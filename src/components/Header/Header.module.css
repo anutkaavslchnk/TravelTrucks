@@ -1,0 +1,28 @@
+.container{
+display:flex;
+text-align: center;
+align-items: center;
+padding-top:28px;
+padding-bottom: 28px;
+padding-left: 64px;
+
+}
+
+.pages{
+    display:flex;
+    gap:32px;
+    margin: 0 auto;
+    
+}
+
+.link {
+    color: var(--black-color);
+    text-decoration: none;
+  }
+  
+  
+  .active {
+    color: var(--red-color);
+  }
+  
+  

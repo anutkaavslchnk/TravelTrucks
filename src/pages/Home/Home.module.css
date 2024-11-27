@@ -1,0 +1,55 @@
+.container {
+    background-image: url('/public/picture-main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%; 
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    position: relative;
+}
+
+
+
+.hero{
+max-width: 571px;
+position: absolute;
+top:38%;
+left:5%
+
+}
+.title_hero{
+    color:var(--white-color);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 32px;
+margin-bottom: 20px;
+line-height: 32px;
+letter-spacing: 40%;
+
+}
+
+.par_hero{
+    color:var(--white-color);
+    font-size: 24px;
+font-weight: 600;
+line-height: 32px;
+margin-bottom: 56px;
+}
+
+.view_now{
+border:none;
+cursor:pointer;
+background-color: var(--red-orange-color);
+border-radius: 200px;
+padding: 16px 60px 16px 60px;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+color:var(--white-color)
+}
+
+.view_now:hover{
+    background-color: var( --red-color);
+}
