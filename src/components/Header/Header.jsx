@@ -1,9 +1,7 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import s from './Header.module.css'
 import sprite from '/public/symbol-defs.svg';
-import Home from '../../pages/Home/Home.jsx';
-import Catalog from '../../pages/Catalog/Catalog.jsx';
-import NotFound from '../../pages/NotFound/NotFound.jsx';
+
 import clsx from 'clsx';
 console.log(s);
 
@@ -30,11 +28,7 @@ const Header = () => {
 
         </div>
             
-<Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/catalog' element={<Catalog/>}></Route>
-        <Route path="*" element={<NotFound />} />
-        </Routes> 
+
 
     </header>
   );

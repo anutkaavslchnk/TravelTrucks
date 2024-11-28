@@ -25,4 +25,6 @@ padding-left: 64px;
     color: var(--red-color);
   }
   
-  
+  .header{
+    background-color: var( --white-light-color);
+  }
