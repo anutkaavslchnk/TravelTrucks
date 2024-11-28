@@ -25,15 +25,16 @@ const Catalog = () => {
 
 <div className={s.checkbox_group}>
   
-  <label className={s.checkbox_button} >
-    <input type="checkbox" className={s.hidden_checkbox} />
-    <span className={s.checkbox_content}>
-      <svg className={s.checkbox_icon}>
-        <use href={`${svg}#icon-ac`}></use>
-      </svg>
-      <span>AC</span>
-    </span>
-  </label>
+<label className={s.checkbox_button}>
+  <input type="checkbox" className={s.hidden_checkbox} />
+  <span className={s.checkbox_content}>
+    <svg className={s.checkbox_icon}>
+      <use href={`${svg}#icon-ac`}></use>
+    </svg>
+    <span>AC</span>
+  </span>
+</label>
+
   <label className={s.checkbox_button}>
     <input type="checkbox" className={s.hidden_checkbox} />
     <span className={s.checkbox_content}>
@@ -81,7 +82,7 @@ const Catalog = () => {
 <div className={s.radio_group}>
   
   <label className={s.radio_button} >
-    <input type="radio" className={s.hidden_checkbox} />
+    <input type="radio" className={s.hidden_radio} name="vehicle"/>
     <span className={s.radio_content}>
       <svg className={s.radio_icon}>
         <use href={`${svg}#icon-van`}></use>
@@ -90,7 +91,7 @@ const Catalog = () => {
     </span>
   </label>
   <label className={s.radio_button}>
-    <input type="radio" className={s.hidden_checkbox} />
+    <input type="radio" className={s.hidden_checkbox}  name="vehicle"/>
     <span className={s.radio_content}>
       <svg className={s.radio_icon}>
         <use href={`${svg}#icon-integrated`}></use>
@@ -101,7 +102,7 @@ const Catalog = () => {
 
 
   <label className={s.radio_button}>
-    <input type="radio" className={s.hidden_checkbox} />
+    <input type="radio" className={s.hidden_checkbox} name="vehicle"/>
     <span className={s.radio_content}>
       <svg className={s.radio_icon}>
         <use href={`${svg}#icon-alcove`}></use>

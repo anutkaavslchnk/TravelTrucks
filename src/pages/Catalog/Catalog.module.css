@@ -18,7 +18,7 @@ line-height: 24px;
     color:var( --grey-color);
 }
 .input_location{
-    padding: 18px 200px 18px 30px;
+    padding: 18px 146px 18px 48px;
     border-radius: 12px;
     background-color: var( --white-light-color);
     border:none;
@@ -28,14 +28,25 @@ line-height: 24px;
 color:var(--black-color);
 
 }
+.input_wrapper:focus-within .input_icon,
+.input_location:not(:placeholder-shown) + .input_icon  {
+    fill: black; 
+  }
+
+.input_location:focus,
+.input_location:active {
+  outline: none;
+  border: 1px solid transparent;
+}
 
 
 .input_icon {
     position: absolute;
-    left: 10px; 
+    left: 20px; 
     width: 16px;
     height: 16px;
-    fill: currentColor; 
+    fill: var( --grey-color);
+    
   }
   .input_wrapper {
     position: relative;
@@ -74,40 +85,37 @@ line-height: 24px;
     height: 96px;
     border: 1px solid var(--light-grey-color);
     border-radius: 12px;
-    transition: border-color 0.3s ease; 
+    
+   
+  }
+  .hidden_checkbox {
+    display: none;
   }
   
- 
-  
-  .checkbox_button input[type="checkbox"] {
-    display: none; 
+  .checkbox_button:has(input[type="checkbox"]:checked) {
+    border: 2px solid red;
   }
   
   .checkbox_content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
   
   .checkbox_icon {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 28px;
   }
   
   .checkbox_button span {
     font-size: 14px;
     font-weight: 500;
   }
-  .checkbox_button.checked {
-    border-color: red; 
-  }
 
 
-
-
-
-
+  
+  
   .radio_group {
     display: flex;
     gap: 12px;
@@ -123,7 +131,7 @@ line-height: 24px;
     height: 96px;
     border: 1px solid var(--light-grey-color);
     border-radius: 12px;
-    transition: border-color 0.3s ease; 
+    transition: border-color 0.3s ease;
   }
   
  
@@ -140,8 +148,8 @@ line-height: 24px;
   }
   
   .radio_icon {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
   }
   
   .radio_button span {
@@ -149,11 +157,16 @@ line-height: 24px;
     font-weight: 500;
     text-align: center;
   }
-  .radio_button.checked {
-    border-color: red; 
+
+
+  .radio_button:has(input[type="radio"]:checked) {
+    border: 2px solid red;
   }
-
-
+  
+  /* Приховування радіокнопки */
+  .hidden_checkbox {
+    display: none;
+  }
   .btn_search{
     margin-top: 40px;
 border: none;
