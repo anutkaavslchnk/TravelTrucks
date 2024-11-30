@@ -1,0 +1,91 @@
+.img{
+    width:292px;
+    height:312px;
+    border-radius:10px;
+}
+.name_price{
+    margin-bottom: 8px;
+}
+.img_cont{
+    display: flex;
+    gap:48px;
+    justify-content:space-around;
+}
+.card{
+    padding-top:48px;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+.cont_svg_rat{
+    display:flex;
+    gap:4px;
+    align-items: center;
+}
+
+.icon_star{
+    fill:var(  --yellow-color)
+}
+.s.rating_location{
+    font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+}
+.icon_location{
+    fill: var( --grey-color);
+}
+.cont_location_rating{
+    align-items: center;
+    display: flex;
+    gap:16px;
+    margin-bottom: 24px;
+    }
+
+    .description{
+
+ margin-top: 28px;
+        color: var( --grey-blue-color);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 36px;
+    
+    }
+    .price_price{
+        margin-bottom: 28px;
+        font-size: 24px;
+font-weight: 600;
+line-height: 32px;
+    }
+    .other{
+        list-style-type: none;
+        display: flex;
+        gap:40px;
+    }
+
+
+
+    .link {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        text-decoration: underline;
+        text-decoration-color: transparent; /* Prevents color change for underline */
+        color: var(--black-color);
+      
+
+    }
+    
+
+    .active {
+      
+        text-decoration: underline; 
+        text-decoration-color: var(--red-color);
+        text-underline-offset: 30px;
+        text-decoration-thickness: 6px;
+    }
+    
+      .arrow{
+        width: 1312px;
+        border: 1px solid var(--light-grey-color);
+      }

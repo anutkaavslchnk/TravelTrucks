@@ -1,13 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import vehiclesReducer from './trailersSlice.js';
 
-const initialState={
-
-}
-
-
-const rootReducer=(state=initialState, action)=>{
-    return state;
-}
-export const store=configureStore({
-    reducer:rootReducer,
+const store = configureStore({
+  reducer: {
+    vehicles: vehiclesReducer,
+  },
 });
+
+export default store;

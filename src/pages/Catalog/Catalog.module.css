@@ -5,6 +5,8 @@
     padding: 48px 64px 52px 64px;
 
 }
+
+/* -----------FILTER PART OF THE PAGE CATALOG----------- */
 .filter_bar{
 display:block;
 
@@ -69,7 +71,7 @@ line-height: 24px;
 
 
 
-
+/* -----Checkbox---------- */
 .checkbox_group {
     display: flex;
     gap: 12px;
@@ -114,7 +116,7 @@ line-height: 24px;
   }
 
 
-  
+  /* -----Radio--------- */
   
   .radio_group {
     display: flex;
@@ -162,11 +164,12 @@ line-height: 24px;
   .radio_button:has(input[type="radio"]:checked) {
     border: 2px solid red;
   }
-  
-  /* Приховування радіокнопки */
+
   .hidden_checkbox {
     display: none;
   }
+
+  /* -----BTN SEARCH-------- */
   .btn_search{
     margin-top: 40px;
 border: none;
@@ -183,3 +186,6 @@ cursor:pointer;
   .btn_search:hover{
     background-color: var(--red-color);
   }
+
+
+ 

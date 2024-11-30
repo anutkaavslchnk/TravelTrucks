@@ -1,5 +1,6 @@
 import svg from '/public/symbol-defs.svg';
 import s from './Catalog.module.css'
+import Trailers from '../../components/Trailers/Trailers';
 const Catalog = () => {
   return (
 
@@ -115,7 +116,7 @@ const Catalog = () => {
 <button className={s.btn_search}>Search</button>
 </div>
 <div className={s.trailers}></div>
-
+<Trailers></Trailers>
     </section>
   )
 };
