@@ -2,22 +2,13 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
+
 export const fetchCampers = createAsyncThunk(
   "vehicles/fetchCampers",
-  async ({ page = 1, filters = {} }, { rejectWithValue }) => {
+  async (page = 1, { rejectWithValue }) => {
     try {
-      const { location, vehicleType } = filters;
-      const queryParams = new URLSearchParams({
-        page,
-        limit: 4,
-        ...(location && { location }),
-        ...(vehicleType && { vehicleType }),
-      }).toString();
-
-      const response = await axios.get(
-        `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers?${queryParams}`
-      );
-      return { campers: response.data, page };
+      const response = await axios.get(`https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers?page=${page}&limit=4`);
+      return { campers: response.data.items, page };
     } catch (error) {
       return rejectWithValue("Failed to load campers data. Please try again later.");
     }

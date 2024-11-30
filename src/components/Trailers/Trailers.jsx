@@ -20,7 +20,7 @@ const Trailers = () => {
 
   const handleHeartClick = (itemId) => {
     dispatch(toggleHeart({ itemId }));
-  };
+  }
   useEffect(() => {
     dispatch(fetchCampers(currentPage));
   }, [dispatch, currentPage]);
@@ -62,7 +62,6 @@ const Trailers = () => {
                 <div className={s.cont_price_name}>
                   <h2 className={s.name_price}>{item.name}</h2>
                   <h3 className={s.price_price}>€{item.price}.00</h3>
-                  
                   <div onClick={() => handleHeartClick(item.id)}>
                 <svg
                   className={`${s.heart} ${hearts[item.id] ? s.clicked : ''}`}
