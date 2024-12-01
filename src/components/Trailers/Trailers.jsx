@@ -2,13 +2,21 @@ import { useDispatch, useSelector } from "react-redux";
 import s from './Trailers.module.css'
 import icon from '/public/symbol-defs.svg'
 import { useEffect } from "react";
-import { selectCampers, selectError, selectIsLoading } from "../../redux/selectors";
+import { selectCampers, selectError, selectFilter, selectIsLoading } from "../../redux/selectors";
 import { Link } from "react-router-dom";
 import { fetchCampers } from "../../redux/trailersOps";
 import { toggleHeart } from "../../redux/heartSlice";
+import { selectFilteredTrailers } from "../../redux/trailersSlice";
 
 const Trailers = () => {
   const dispatch = useDispatch();
+
+  const filter = useSelector(selectFilter);
+
+
+  const filteredTrailers = useSelector(selectFilteredTrailers);
+
+
   const campers = useSelector(selectCampers);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -53,7 +61,8 @@ const Trailers = () => {
   return (
     <div className={s.trailers_container}>
       <ul className={s.list}>
-        {campers.map((item) => (
+        
+      {filteredTrailers.length === 0 ? <h2>No trailers here</h2> : filteredTrailers.map((item) => (
           <li key={item.id} className={s.card}>
             <div className={s.img_cont}>
               <img src={item.gallery[0]?.thumb || "default.jpg"} alt={item.name} className={s.img} />
@@ -61,6 +70,7 @@ const Trailers = () => {
             <div className={s.info}>
                 <div className={s.cont_price_name}>
                   <h2 className={s.name_price}>{item.name}</h2>
+                  <div className={s.cont_heart_price}>
                   <h3 className={s.price_price}>€{item.price}.00</h3>
                   <div onClick={() => handleHeartClick(item.id)}>
                 <svg
@@ -71,6 +81,9 @@ const Trailers = () => {
                   <use href={`${icon}#icon-heart`}></use>
                 </svg>
               </div>
+                  </div>
+                 
+
                 </div>
              
               <div className={s.cont_location_rating}>

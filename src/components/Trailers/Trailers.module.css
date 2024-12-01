@@ -17,6 +17,7 @@ display:flex;
 gap:24px;
 width:888px;
 height:368px;
+margin: 0 auto;
 }
 .img_cont{
     padding-top:24px;
@@ -96,12 +97,12 @@ gap:8px;
 padding: 12px 18px 12px 18px;
 border-radius: 100px;
 background-color: var(--white-grey-color);
-/* width: calc(33.33% - 8px);  */
+
 
 }
 .info{
 padding-top:24px;
-padding-right: 24px;
+
 }
 .feat_title{
     font-size: 16px;
@@ -132,15 +133,31 @@ background-color: var(  --red-orange-color);
     line-height: 24px;
    
 }
+
+.load_more_btn:hover,
+.load_more_btn:active{
+    border-color:var(--)
+}
 .cont_btn{
     text-align: center;
 }
 
 .heart {
- 
+ margin-right: 24px;
     transition: stroke 0.3s ease, fill 0.3s ease;
   }
   
   .heart.clicked {
     stroke: red; 
+  }
+  .cont_heart_price{
+    display:flex;
+    gap:13px;
+    align-items: center;
+  }
+  .arrow{
+    margin-top: 27px;
+    width: 1312px;
+    border: 1px solid var( --light-grey-color);
+    margin-top: 27px;
   }

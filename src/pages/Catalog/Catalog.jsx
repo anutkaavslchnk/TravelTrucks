@@ -1,7 +1,18 @@
 import svg from '/public/symbol-defs.svg';
 import s from './Catalog.module.css'
 import Trailers from '../../components/Trailers/Trailers';
+import { useDispatch } from 'react-redux';
+import { changeFilter } from '../../redux/filterSlice';
+import { useState } from 'react';
 const Catalog = () => {
+  const dispatch=useDispatch()
+  const [location, setLocation] = useState('');
+
+  const handleSearch = () => {
+    dispatch(changeFilter(
+      location
+    )); 
+  };
   return (
 
 
@@ -14,6 +25,7 @@ const Catalog = () => {
     <use href={`${svg}#icon-loc`}></use>
   </svg>
   <input
+ onChange={(e) => setLocation(e.target.value)} 
     className={s.input_location}
     type="text"
     placeholder="City"
@@ -113,7 +125,7 @@ const Catalog = () => {
   </label>
   
 </div>
-<button className={s.btn_search}>Search</button>
+<button onClick={handleSearch} className={s.btn_search}>Search</button>
 </div>
 <div className={s.trailers}></div>
 <Trailers></Trailers>

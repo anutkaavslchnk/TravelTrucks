@@ -84,8 +84,9 @@ const CatalogCamper = () => {
         </NavLink>
     </li>
 </ul>
+<div className={s.arrow}></div>
                 <Outlet />
-                {/* <div className={s.arrow}></div> */}
+                
             </div>
         
     );

@@ -18,6 +18,8 @@ export const fetchCampers = createAsyncThunk(
 
 
 
+
+
 export const fetchCamper = createAsyncThunk(
   'campers/fetchCamper',
   async (id, { rejectWithValue }) => {

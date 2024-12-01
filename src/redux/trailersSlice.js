@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchCampers } from "./trailersOps";
+import { selectCampers, selectFilter } from "./selectors";
 
 const initialState = {
   campers: [],
@@ -8,6 +9,22 @@ const initialState = {
   currentPage: 1,
   hasMore: true,
 };
+export const selectFilteredTrailers = createSelector(
+  [selectCampers, selectFilter],
+  (campers, filter) => {
+    if (!filter) return campers; 
+
+    
+
+    return campers.filter(item => {
+      const matchLocation=item.location && item.location.includes(filter);
+      
+      return matchLocation;
+    });
+    
+  }
+);
+
 
 const vehiclesSlice = createSlice({
   name: "vehicles",

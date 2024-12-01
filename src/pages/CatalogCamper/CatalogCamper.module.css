@@ -86,6 +86,7 @@ line-height: 32px;
     }
     
       .arrow{
+        margin-top: 27px;
         width: 1312px;
         border: 1px solid var(--light-grey-color);
       }
