@@ -13,7 +13,7 @@ const Book = () => {
     name: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
     email: Yup.string().email("Must be a valid email!").required("Required"),
     calendar: Yup.date().required("Required").nullable(),
-    comment: Yup.string().oneOf(["good", "neutral", "bad"])
+    comment: Yup.string(),
   });
 
   const initialValues = {
@@ -24,7 +24,7 @@ const Book = () => {
   };
   const nameFieldId = useId();
   const emailFieldId = useId();
-  const calFieldId = useId();
+
   const levelFieldId = useId();
   const handleSubmit = (values, actions) => {
     console.log(values);
