@@ -1,6 +1,6 @@
 # TravelTrucks 🛻
 
-TravelTrucks is a React-based web platform designed for adventurers and road enthusiasts! Discover, explore, and review travel trucks from around the world. 
+TravelTrucks is a React-based web platform designed for adventurers and road enthusiasts!
 ==============================================================================================================
 Features 🌟
 -------------------
