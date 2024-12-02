@@ -1,8 +1,22 @@
-# React + Vite
+# TravelTrucks 🛻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TravelTrucks is a React-based web platform designed for adventurers and road enthusiasts! Discover, explore, and review travel trucks from around the world. Built with Vite, the application ensures a lightning-fast experience, modern features, and Hot Module Replacement (HMR) for seamless development.
+========================================================================================================================================
+Features 🌟
+-------------------
+- Search for Trucks: Easily find travel trucks by model, type, or location.
+- Detailed Truck Profiles: View specifications, features, rental details, and user-uploaded images.
+- User Opinions: Read reviews from other adventurers and share your experiences.
+- Interactive Map: Explore trucks available nearby or in specific destinations.
 
-Currently, two official plugins are available:
+Technologies Used 🛠️
+-------------------
+* React: For building the user interface.
+* Vite: For a fast and optimized development environment.
+* React Router: For smooth navigation between pages.
+* Axios: To fetch and manage data from APIs.
+* Tailwind CSS: For a clean and modern UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+License 📄
+-------------------
+This project is licensed under the MIT License.
