@@ -38,17 +38,20 @@ const vehiclesSlice = createSlice({
       })
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.isLoading = false;
-
-        if (action.payload.page === 1) {
-          state.campers = action.payload.campers;  
-        } else {
-          state.campers = state.campers.concat(action.payload.campers);  
-        }
-
-        state.currentPage = action.payload.page;
-
+      
        
-        state.hasMore = action.payload.campers.length === 4;
+        if (action.payload.page === 1) {
+          state.campers = action.payload.campers;
+        } else {
+         
+          const newCampers = action.payload.campers.filter(
+            camper => !state.campers.some(existingCamper => existingCamper.id === camper.id)
+          );
+          state.campers = [...state.campers, ...newCampers];
+        }
+      
+        state.currentPage = action.payload.page;
+        state.hasMore = action.payload.campers.length === 4; 
       })
       .addCase(fetchCampers.rejected, (state, action) => {
         state.isLoading = false;
