@@ -1,7 +1,7 @@
 # TravelTrucks 🛻
 
-TravelTrucks is a React-based web platform designed for adventurers and road enthusiasts! Discover, explore, and review travel trucks from around the world. Built with Vite, the application ensures a lightning-fast experience, modern features, and Hot Module Replacement (HMR) for seamless development.
-========================================================================================================================================
+TravelTrucks is a React-based web platform designed for adventurers and road enthusiasts!
+==============================================================================================================
 Features 🌟
 -------------------
 - Search for Trucks: Easily find travel trucks by model, type, or location.
