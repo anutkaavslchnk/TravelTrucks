@@ -133,7 +133,11 @@ background-color: var(  --red-orange-color);
     line-height: 24px;
    
 }
-
+.btn_heart{
+    border:none;
+    cursor:pointer;
+    background-color: transparent;;
+}
 .load_more_btn:hover,
 .load_more_btn:active{
     border-color:var(--)
