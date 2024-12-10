@@ -106,7 +106,7 @@ const Trailers = () => {
                   if (featureValue === undefined || featureValue === null) return null;
 
                   if (featureKey === "transmission") {
-                    const icon = featuresMap[featureKey].icon(featureValue.toLowerCase());
+                    const icon = featuresMap[featureKey].featureIcon(featureValue.toLowerCase());
                     const label = featuresMap[featureKey].label(featureValue.toLowerCase());
 
                     return (
