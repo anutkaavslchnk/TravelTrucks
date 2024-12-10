@@ -49,12 +49,11 @@ const Trailers = () => {
 
   const featuresMap = {
     AC: { icon: "icon-ac", label: "AC" },
-    bathroom: { icon: "icon-bathroom", label: "Bathroom" },
     kitchen: { icon: "icon-kitchen", label: "Kitchen" },
     TV: { icon: "icon-tv", label: "TV" },
     transmission: {
-      icon: (value) => "icon-automatic",
-      label: (value) => (value === "manual" ? null : value.charAt(0).toUpperCase() + value.slice(1)), 
+      featureIcon: (value) => (value=="manual" ? 'icon-manual' : "icon-automatic" ),
+      label: (value) => (value === "manual" ? 'Manual' : 'Automatic'), 
     },
   }
 
@@ -71,7 +70,7 @@ const Trailers = () => {
                 <div className={s.cont_price_name}>
                   <h2 className={s.name_price}>{item.name}</h2>
                   <div className={s.cont_heart_price}>
-                  <h3 className={s.price_price}>€{item.price}.00</h3>
+                  <h3 className={s.price_price}>€{item.price.toFixed(2)}</h3>
                   <button className={s.btn_heart} onClick={() => handleHeartClick(item.id)}>
                 <svg
                   className={`${s.heart} ${hearts[item.id] ? s.clicked : ''}`}

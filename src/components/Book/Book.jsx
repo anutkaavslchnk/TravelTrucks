@@ -53,6 +53,7 @@ const Book = () => {
       {...field}
       selected={field.value ? new Date(field.value) : null}
       onChange={(date) => form.setFieldValue(field.name, date)}
+      minDate={new Date()}
       dateFormat="yyyy/MM/dd"
       placeholderText="Select a booking date"
       className={`${s.fields} ${s.custom_calendar__input}`} 
