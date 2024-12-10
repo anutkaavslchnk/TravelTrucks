@@ -72,7 +72,7 @@ const Trailers = () => {
                   <h2 className={s.name_price}>{item.name}</h2>
                   <div className={s.cont_heart_price}>
                   <h3 className={s.price_price}>€{item.price}.00</h3>
-                  <div onClick={() => handleHeartClick(item.id)}>
+                  <button onClick={() => handleHeartClick(item.id)}>
                 <svg
                   className={`${s.heart} ${hearts[item.id] ? s.clicked : ''}`}
                   width="24px"
@@ -80,7 +80,7 @@ const Trailers = () => {
                 >
                   <use href={`${icon}#icon-heart`}></use>
                 </svg>
-              </div>
+              </button>
                   </div>
                  
 
