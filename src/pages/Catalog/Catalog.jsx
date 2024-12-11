@@ -1,13 +1,14 @@
 import svg from '/public/symbol-defs.svg';
 import s from './Catalog.module.css'
 import Trailers from '../../components/Trailers/Trailers';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeFilter } from '../../redux/filterSlice';
 import { useState } from 'react';
+import { selectCampers } from '../../redux/selectors';
 const Catalog = () => {
   const dispatch=useDispatch()
   const [location, setLocation] = useState('');
-
+  const campers = useSelector(selectCampers);
   const handleSearch = () => {
     dispatch(changeFilter(
       location
@@ -24,13 +25,22 @@ const Catalog = () => {
   <svg className={s.input_icon}>
     <use href={`${svg}#icon-loc`}></use>
   </svg>
-  <input
- onChange={(e) => setLocation(e.target.value)} 
-    className={s.input_location}
-    type="text"
-    placeholder="City"
-    
-  />
+  <select 
+  name="location" 
+  id="location" 
+  value={location} 
+  onChange={(e) => setLocation(e.target.value)} 
+  className={s.input_location}
+>
+  <option value="" disabled>
+  City
+  </option>
+  {campers.map(item => (
+    <option key={item.id} value={item.location}>
+      {item.location}
+    </option>
+  ))}
+</select>
 </div>
 <p className={s.par}>Filters</p>
 <h2 className={s.eq_title}>Vehicle equipment</h2>

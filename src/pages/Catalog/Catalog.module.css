@@ -28,12 +28,10 @@ line-height: 24px;
 font-weight: 400;
 line-height: 24px;
 color:var(--black-color);
-
+-webkit-appearance: none; 
+  -moz-appearance: none;  
+  appearance: none;    
 }
-.input_wrapper:focus-within .input_icon,
-.input_location:not(:placeholder-shown) + .input_icon  {
-    fill: black; 
-  }
 
 .input_location:focus,
 .input_location:active {

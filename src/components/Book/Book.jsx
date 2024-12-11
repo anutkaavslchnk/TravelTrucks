@@ -5,6 +5,7 @@ import { useId } from "react";
 import { ErrorMessage } from "formik";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
 import toast, { Toaster } from "react-hot-toast";
 
 const Book = () => {
@@ -53,11 +54,12 @@ const Book = () => {
       {...field}
       selected={field.value ? new Date(field.value) : null}
       onChange={(date) => form.setFieldValue(field.name, date)}
+      shouldCloseOnSelect={false}
       minDate={new Date()}
       dateFormat="yyyy/MM/dd"
       placeholderText="Select a booking date"
-      className={`${s.fields} ${s.custom_calendar__input}`} 
-       calendarClassName="custom-calendar"
+      className={`${s.fields}`} 
+      
     />
   )}
 </Field>

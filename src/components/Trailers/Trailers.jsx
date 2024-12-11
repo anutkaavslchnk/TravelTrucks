@@ -106,13 +106,13 @@ const Trailers = () => {
                   if (featureValue === undefined || featureValue === null) return null;
 
                   if (featureKey === "transmission") {
-                    const icon = featuresMap[featureKey].featureIcon(featureValue.toLowerCase());
-                    const label = featuresMap[featureKey].label(featureValue.toLowerCase());
+                    const featureIcon = featuresMap[featureKey].featureIcon(featureValue);
+                    const label = featuresMap[featureKey].label(featureValue);
 
                     return (
                       <li className={s.feature} key={featureKey}>
                         <svg width="20px" height="20px" className={s.icon}>
-                          <use href={`${icon}#${icon}`}></use>
+                          <use href={`${icon}#${featureIcon}`}></use>
                         </svg>
                         {label && <p className={s.feat_title}>{label}</p>}
                       </li>
