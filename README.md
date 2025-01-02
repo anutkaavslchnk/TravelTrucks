@@ -1,6 +1,6 @@
 # TravelTrucks 🛻
 
-==================
+
 Features 🌟
 -------------------
 - Search for Trucks: Easily find travel trucks by model, type, or location.
