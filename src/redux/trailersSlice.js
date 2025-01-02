@@ -45,24 +45,23 @@ const vehiclesSlice = createSlice({
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.isLoading = false;
       
-       
+        // If it's the first page, replace the campers array, otherwise append the new ones
         if (action.payload.page === 1) {
           state.campers = action.payload.campers;
         } else {
-         
           const newCampers = action.payload.campers.filter(
             camper => !state.campers.some(existingCamper => existingCamper.id === camper.id)
           );
-          state.campers = [...state.campers, ...newCampers];
+          state.campers = [...state.campers, ...newCampers]; // Append new campers to existing ones
         }
       
+        // Update the currentPage to reflect the latest page
         state.currentPage = action.payload.page;
-        state.hasMore = action.payload.campers.length === 4; 
-      })
-      .addCase(fetchCampers.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
+      
+        // Set hasMore to false if less than 4 campers are returned (indicating no more data)
+        state.hasMore = action.payload.campers.length === 4;
       });
+      
   },
 });
 

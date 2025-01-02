@@ -48,11 +48,28 @@ const handleSearch = () => {
   <option value="" disabled>
   City
   </option>
-  {campers.map(item => (
-    <option key={item.id} value={item.location}>
-      {item.location}
+ 
+    <option  value="Ukraine, Kyiv">
+    Ukraine, Kyiv
     </option>
-  ))}
+    <option  value="Ukraine, Dnipro">
+    Ukraine, Dnipro
+    </option>
+    <option  value="Ukraine, Poltava">
+    Ukraine, Poltava
+    </option>
+    <option  value="Ukraine, Odessa">
+    Ukraine, Odesa
+    </option>
+    <option  value="Ukraine, Kharkiv">
+    Ukraine, Kharkiv
+    </option>
+    <option  value="Ukraine, Sumy">
+    Ukraine, Sumy
+    </option>
+    <option  value="Ukraine, Lviv">
+    Ukraine, Lviv
+    </option>
 </select>
 </div>
 <p className={s.par}>Filters</p>

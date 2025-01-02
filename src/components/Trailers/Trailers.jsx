@@ -34,7 +34,7 @@ const Trailers = () => {
   }, [dispatch, currentPage]);
 
   const handleLoadMore = () => {
-    if (hasMore) {
+    if (hasMore && !isLoading) {
       dispatch(fetchCampers(currentPage + 1)); 
     }
   };
@@ -134,7 +134,7 @@ const Trailers = () => {
           </li>
         ))}
       </ul>
-      {hasMore && !isLoading && (
+      {filteredTrailers.length > 0 && hasMore && !isLoading && (
         <div className={s.cont_btn}>
            <button onClick={handleLoadMore} className={s.load_more_btn}>Load More</button>
         </div>
