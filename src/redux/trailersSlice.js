@@ -16,11 +16,17 @@ export const selectFilteredTrailers = createSelector(
 
     
 
-    return campers.filter(item => {
-      const matchLocation=item.location && item.location.includes(filter);
-      
-      return matchLocation;
+    return campers.filter((item) => {
+      const matchLocation = filter.location ? item.location.includes(filter.location) : true;
+      const matchAc = filter.ac ? item.AC === filter.ac : true;
+      const matchKitchen = filter.kitchen ? item.kitchen === filter.kitchen : true;
+      const matchTv = filter.tv ? item.TV === filter.tv : true;
+      const matchBathroom = filter.bathroom ? item.bathroom === filter.bathroom : true;
+      const matchAutomatic = filter.automatic ? item.transmission === 'automatic' : true;
+      const matchType = filter.type ? item.form === filter.type : true;
+      return matchLocation && matchAc && matchKitchen && matchTv && matchBathroom && matchAutomatic && matchType;
     });
+    
     
   }
 );

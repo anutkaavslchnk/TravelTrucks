@@ -16,7 +16,7 @@ const heartSlice = createSlice({
     toggleHeart: (state, action) => {
       const { itemId } = action.payload;
       state.hearts[itemId] = !state.hearts[itemId];
-      localStorage.setItem('hearts', JSON.stringify(state.hearts));  // Save hearts to localStorage
+      localStorage.setItem('hearts', JSON.stringify(state.hearts)); 
     },
   },
 });
